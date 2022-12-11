@@ -9,7 +9,23 @@
     <H1>Weather Dashboard</H1>
 </head>
 <body>
-    <div><input type="text" name="city-name" id="city-name"><button id="search">search</button></div>
+    <div class="container">
+        <div class="row">
+            <div class="column-4"><h4>Search for a city:</h4></div>
+        </div>
+        <div><input type="text" name="city-name" id="city-name"><button id="search">search</button></div>
+        <div class="weather-box">
+            <div class="weather-box-row">
+                <div class="weather-box-column" id="current-weather">
+                    <h3 class="city-name" id="current-city"></h3>
+                    <p>Temperature: <span class="current" id="temperature"></span></p>
+                    <p>Humidty: <span class="current" id="humidity"></span> </p>
+                    <p>Wind Speed: <span class="current" id="wind-speed"></span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
    <script src="./script.js"></script>
 </body>
 </html>

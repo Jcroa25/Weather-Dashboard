@@ -1,3 +1,14 @@
+let city = "";
+
+/*
+let searchCity = $("#seach-city");
+let searchButton = $("#search-button");
+let currentCity = $("#current-city");
+let currentTemperature =$("#temperature");
+let currentHumidty = $("#humidity");
+let currentWSpeed = $("#wind-speed");
+let sCity = [];
+*/
 var apiKey = "44ac66359ebc06ee5f56d4c8d0ddc084"
 
 var cityName =document.getElementById("city-name")
@@ -15,7 +26,7 @@ function createWeather(cityName) {
    })
    .then(function(weatherdata){
     console.log(weatherdata);
-    
+
     var forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${cityName}&appid=${apiKey}&units=imperial`
     fetch(forecastUrl)
     .then(function(response){
