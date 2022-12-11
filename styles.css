@@ -1,6 +1,12 @@
+head {
+    height: 300px;
+}
+
 h1 {
     text-align: center;
+    padding-top: 40px;
     background-color: lightblue;
+    height: 100px;
 }
 
 .container {

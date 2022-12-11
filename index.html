@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles.css">
     <title>Weather Dashboard</title>
-    <H1>Weather Dashboard</H1>
+    <H1 class="">Weather Dashboard</H1>
 </head>
 <body>
     <div class="container">
@@ -23,7 +23,49 @@
                     <p>Wind Speed: <span class="current" id="wind-speed"></span></p>
                 </div>
             </div>
+            <div class="column-forecast" id="future-weather">
+                <h3>5-Day Forecast:</h3>
+                <div class="row text-light">
+                    <div class="col">
+                        <p id="fDate0"></p>
+                        <p id="fImg0"></p>
+                        <p>Temp: <span id="fTemp0"></span></p>
+                        <p>Humidity: <span id="fHumdity0"></span></p>
+                        <p>Wind: <span id="fWind0"></span></p>
+                    </div>
+                    <div class="col">
+                        <p id="fDate1"></p>
+                        <p id="fImg1"></p>
+                        <p>Temp: <span id="fTemp1"></span></p>
+                        <p>Humidity: <span id="fHumdity1"></span></p>
+                        <p>Wind: <span id="fWind0"></span></p>
+                    </div>
+                    <div class="col">
+                        <p id="fDate2"></p>
+                        <p id="fImg2"></p>
+                        <p>Temp: <span id="fTemp2"></span></p>
+                        <p>Humidity: <span id="fHumdity2"></span></p>
+                        <p>Wind: <span id="fWind2"></span></p>
+                    </div>
+                    <div class="col">
+                        <p id="fDate3"></p>
+                        <p id="fImg3"></p>
+                        <p>Temp: <span id="fTemp3"></span></p>
+                        <p>Humidity: <span id="fHumdity3"></span></p>
+                        <p>Wind: <span id="fWind3"></span></p>
+                    </div>
+                    <div class="col">
+                        <p id="fDate4"></p>
+                        <p id="fImg4"></p>
+                        <p>Temp: <span id="fTemp4"></span></p>
+                        <p>Humidity: <span id="fHumdity4"></span></p>
+                        <p>Wind: <span id="fWind4"></span></p>
+                    </div>
+                </div>
+            
+            </div>
         </div>
+        
     </div>
     
    <script src="./script.js"></script>
