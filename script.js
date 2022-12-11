@@ -1,8 +1,35 @@
-const text = document.querySelector('div')
+var apiKey = "44ac66359ebc06ee5f56d4c8d0ddc084"
 
-text.addEventListener('click'. clickOutcome)
- 
-function clickOutcome() {
-    alert('I have been clicked')
+var cityName =document.getElementById("city-name")
+
+var search = document.getElementById("search")
+
+function createWeather(cityName) {
+   var url = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}&units=imperial`
+   fetch(url)
+   .then(function(response){
+    if (!response.ok){
+        throw response.json();
+    }
+    return response.json();
+   })
+   .then(function(weatherdata){
+    console.log(weatherdata);
+    
+    var forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${cityName}&appid=${apiKey}&units=imperial`
+    fetch(forecastUrl)
+    .then(function(response){
+        if (!response.ok){
+            throw response.json();
+        }
+        return response.json();
+    })
+    .then(function(forecastData){
+        console.log(forecastData);
+    })
+   })
 }
 
+search.addEventListener("click" , function(){
+    createWeather(cityName.value)
+})
