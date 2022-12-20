@@ -10,7 +10,7 @@ var currentIconEl = document.querySelector('#current-icon');
 var forecastContainer = document.querySelector('#forecast-container');
 var forecastCards = document.querySelectorAll(".card");
 var searchContainer = document.querySelector('#search-container');
-
+var storedCities = document.querySelector('storedCities')
 
 
 /*var cityName =document.getElementById("city-name")
@@ -173,15 +173,16 @@ function searchSubmit(event) {
 
 function renderSearches() {
     var storedCities = JSON.parse(localStorage.getItem("cities"));
+    var cities = storedCities
     if(!cities) {
         console.log('no saved inputs yet')
     } else {
         for (i = 0; i < cities.length; i++) {
-            var cities = cities[i];
+            var city = cities[i];
             var buttonEl = document.createElement('button');
             buttonEl.classList.add('btnEl', 'btn', 'btn-info', 'm-2' );
             buttonEl.innerHTML = city;
-            searchContainer.append(buttonEl);
+            
             prevSearchSubmit(buttonEl)
         }
     }
